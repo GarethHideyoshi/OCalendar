@@ -1,0 +1,361 @@
+:root{
+    --image-height: 170px;
+    --department-Yscale: 1;
+    --department-height: 30px;
+    --description-height: 0px;
+    --display-3rd-row-height: 0px;
+    --display-1st-row-height: 30px;
+    
+    --lever: 1;
+}
+
+*{
+    transition-duration: 1s;
+}
+
+body{
+    background-color: grey;
+    margin: 0px;
+}
+
+.Boody{
+    background-color: rgb(114, 124, 134);
+    border: 1px dashed black;
+    /* max-width: 900px;
+    height: 100vh; */
+    height: 874px;
+    width: 402px;
+
+
+    margin: 0 auto 0 auto;
+
+    display: grid;
+    grid-template-rows: repeat(41, 1fr);
+    grid-template-columns: repeat(21, 1fr);
+
+}
+
+.headhead{
+    border: 1px dashed black;
+    margin: 0px;
+    background-color: rgb(67, 67, 67);
+    
+
+    /* grid pos */
+    /* Start: row, col. End: row, col */
+    grid-area: 1 / 1 / 5 / 22;
+    display: flex;
+}
+
+.Logo{
+    border: 1px dashed black;
+    height: 100%;
+    width: 33%;
+    /* grid pos */
+    grid-column-start: 1;
+
+}
+
+.header-title{
+    border: 1px dashed black;
+    justify-self: center;
+    align-self: center;
+
+    /* grid pos */
+    grid-column-start: 2;
+}
+
+.profile{
+    border: 1px dashed black;
+    width: 33%;
+
+    /* grid pos */
+    grid-column-start: 3;
+}
+
+/*  */
+.choice-container{
+    border: 1px dashed black;
+    margin: 0px;
+    background-color: rgb(67, 67, 67);
+
+    /* grid pos */
+    /* Start: row, col. End: row, col */
+    grid-area: 7 / 2 / 19 / 21;
+
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr 2fr 1fr 2fr 1fr;
+    grid-template-columns: repeat(5, 2fr) 1fr 1fr repeat(5, 2fr);
+    transition: all 300ms ease-in-out;
+}
+
+.button-event{
+    border: 1px dashed black;
+    margin: 0px;
+    background-color: rgb(67, 67, 67);
+
+    /* grid pos */
+    /* Start: row, col. End: row, col */
+    grid-area: 2 / 2 / 3 / 7;
+
+    
+
+}
+
+.button-event p{
+    justify-self: center;
+}
+
+.button-suspension{
+    border: 1px dashed black;
+    margin: 0px;
+    background-color: rgb(67, 67, 67);
+
+    /* grid pos */
+    /* Start: row, col. End: row, col */
+    grid-area: 2 / 7 / 3 /12;
+}
+
+.button-suspension p{
+    justify-self: center;
+}
+
+.dropdown-dept{
+    border: 1px dashed black;
+    margin: 0px;
+    background-color: rgb(67, 67, 67);
+
+    /* grid pos */
+    /* Start: row, col. End: row, col */
+    grid-area: 4 / 2 / 5 / 7;
+}
+
+.dropdown-program{
+    border: 1px dashed black;
+    margin: 0px;
+    background-color: rgb(67, 67, 67);
+
+    /* grid pos */
+    /* Start: row, col. End: row, col */
+    grid-area: 4 / 7 / 5 /12;
+}
+
+.button-previous{
+    border: 1px dashed black;
+    margin: 0px;
+    background-color: rgb(67, 67, 67);
+
+    /* grid pos */
+    /* Start: row, col. End: row, col */
+    grid-area: 6 / 2 / 7 / 5;
+
+}
+
+.button-today{
+    border: 1px dashed black;
+    margin: 0px;
+    background-color: rgb(67, 67, 67);
+
+    /* grid pos */
+    /* Start: row, col. End: row, col */
+    grid-area: 6 / 5 / 7 / 9;
+
+}
+
+.button-upcoming{
+    border: 1px dashed black;
+    margin: 0px;
+    background-color: rgb(67, 67, 67);
+
+    /* grid pos */
+    /* Start: row, col. End: row, col */
+    grid-area: 6 / 9 / 7 / 12;
+}
+
+
+
+/* MIDDLe */
+.content-text-container{
+    border: 1px dashed black;
+    margin: 0px;
+    background-color: rgb(92, 92, 92);
+
+    padding: 0;
+    margin: 0;
+
+    
+    align-self: center;
+
+    /* grid */
+    grid-area: 20 / 2 / 22 / 10;
+}
+
+.content-text-container > p{
+    justify-self: center;
+    font-size: 1.2em;
+    padding: 0;
+    margin: 0;
+}
+
+/* .display-number{
+    border: 1px dashed black;
+    background-color: rgb(92, 92, 92);
+
+    grid-row-start: 20;
+} */
+
+.button-left.lol{
+    border: 1px dashed black;
+    margin: 0px;
+    background-color: rgb(92, 92, 92);
+
+    grid-area: 20 / 12 / 22 / 15;
+
+}
+
+.button-left{
+    border: 1px dashed black;
+    margin: 0px;
+    background-color: rgb(92, 92, 92);
+
+    grid-area: 20 / 16 / 22 / 18;
+
+}
+
+.button-right{
+    border: 1px dashed black;
+    margin: 0px;
+    background-color: rgb(92, 92, 92);
+
+    grid-area: 20 / 19 / 22 / 21;
+}
+
+
+
+/*  */
+/*  */
+/*  */
+.display-data-container{
+    border: 1px dashed black;
+    margin: 0px;
+    background-color: rgb(67, 67, 67);
+
+    grid-area: 23 / 2 / 40 / 21;
+
+    display: grid;
+    grid-template-rows: var(--image-height) auto;
+
+}
+
+.display-number{
+    grid-row-start: 1;
+}
+
+.display-image-container{
+    position: relative;
+    height: var(--image-height);        /* needed: absolute children don't give the container height */
+    overflow: hidden;
+    grid-row-start: 1;
+}
+
+.display-image{
+    position: absolute;
+    top: 0;
+    height: 170px;
+    width: 170px;
+}
+
+/* back left */
+.display-image.imgleft{
+    left: 0;
+    z-index: 1;
+    background-color: blue;
+}
+
+/* front center */
+.display-image.imgcenter{
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    background-color: red;
+}
+
+/* back right */
+.display-image.imgright{
+    right: 0;
+    z-index: 1;
+    background-color: green;
+}
+
+/*  */
+.description-container{
+    border: 1px dashed black;
+    margin: 0px;
+    background-color: rgb(67, 67, 67);
+    box-sizing: border-box;
+    min-height: 0;
+
+    display: grid;
+    grid-template-columns: 1fr auto;     /* left: date, right: button */
+    grid-template-rows: var(--display-1st-row-height) auto var(--display-3rd-row-height) 30px;
+    padding: 6px 5%;
+    row-gap: 4px;
+}
+
+/* top */
+.department{
+    grid-area: 1 / 1 / 2 / 3;            /* spans both columns */
+    margin-top: 1em;
+    font-size: 1.5em;
+    align-self: center;
+    height: var(--display-1st-row-height);
+    transform: scaleY(var(--department-Yscale));
+}
+
+/* middle: horizontally scrollable title */
+.display-title{
+    grid-area: 2 / 1 / 3 / 3;
+    font-size: 2em;
+    align-self: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    scrollbar-width: thin;
+
+    scrollbar-width: thin;
+    scrollbar-color: rgb(0, 0, 0) transparent;   /* thumb, track */
+
+}
+
+/* expandable description (collapses its space, unlike scaleY) */
+.display-description{
+    grid-area: 3 / 1 / 4 / 3;
+    min-height: 0;
+    overflow: hidden;
+    height: var(--description-height);
+    background-color: bisque;
+}
+
+/* bottom left */
+.display-date{
+    grid-area: 4 / 1 / 5 / 2;
+    align-self: center;
+    justify-self: start;
+}
+
+/* bottom right */
+.button-detail{
+    grid-area: 4 / 2 / 5 / 3;
+    align-self: center;
+    justify-self: center;
+    padding: 4px 12px;
+    background-color: blueviolet;
+    cursor: pointer;
+}
+
+.department p,
+.display-title p{
+    margin: 0;                           /* removes the default <p> spacing, so no negative-margin hacks */
+}
+
+
