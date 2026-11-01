@@ -1,0 +1,265 @@
+:root{
+    
+}
+
+*{
+    transition-duration: 1s;
+}
+
+body{
+    background-color: rgb(2, 2, 2);
+    margin: 0px;
+}
+
+.D-dashboard{
+    border: 1px dashed black;
+    margin: 0px;
+    background-color: rgb(200, 200, 200);
+
+    width: 90%;
+    height: 90vh;
+
+    justify-self: center;
+    transform: translateY(5%);
+
+    display: grid;
+    grid-template-columns: repeat(40, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+}
+
+.D-Header{
+    border: 1px dashed black;
+    margin: 0px;
+    background-color: rgb(75, 75, 75);
+
+    /* grid pos */
+    /* Start: row, col. End: row, col */
+    grid-area: 1 / 1 / 3 / 41;
+    display: grid;
+
+    grid-template-columns: repeat(3,1fr);
+}
+
+.D-sidebar{
+    border: 1px dashed black;
+    margin: 0px;
+    background-color: rgb(255, 255, 255);
+
+    /* grid pos */
+    /* Start: row, col. End: row, col */
+    grid-area: 4 / 2 / 20 / 7;
+    display: grid;
+
+    grid-template-columns: 1fr repeat(3, 2fr) 1fr;
+    /* grid-template-rows: 1fr repeat(28,1fr) 1fr; */
+    grid-template-rows: 1fr repeat(14,2fr) 1fr;
+}
+
+.D-user{
+    border: 1px dashed black;
+    margin: 0px;
+    background-color: rgb(255, 255, 255);
+
+    /* grid pos */
+    /* Start: row, col. End: row, col */
+    grid-area: 2 / 2 / 4 / 5;
+    display: grid;
+}
+
+.D-user p{
+    justify-self: center;
+    align-self: center;
+}
+
+.D-event{
+    border: 1px dashed black;
+    margin: 0px;
+    background-color: rgb(255, 255, 255);
+
+    /* grid pos */
+    /* Start: row, col. End: row, col */
+    grid-area: 5 / 2 / 7 / 5;
+    display: grid;
+}
+
+.D-event p{
+    justify-self: center;
+    align-self: center;
+}
+
+.D-suspension{
+    border: 1px dashed black;
+    margin: 0px;
+    background-color: rgb(255, 255, 255);
+
+    /* grid pos */
+    /* Start: row, col. End: row, col */
+    grid-area: 8 / 2 / 10 / 5;
+    display: grid;
+}
+
+.D-suspension p{
+    justify-self: center;
+    align-self: center;
+}
+
+.D-upload{
+    border: 1px dashed black;
+    margin: 0px;
+    background-color: rgb(255, 255, 255);
+
+    /* grid pos */
+    /* Start: row, col. End: row, col */
+    grid-area: 14 / 2 / 16 / 5;
+    display: grid;
+}
+
+.D-upload p{
+    justify-self: center;
+    align-self: center;
+}
+
+
+
+/*  */
+.D-content-area{
+    border: 1px dashed black;
+    margin: 0px;
+    background-color: rgb(255, 255, 255);
+
+    /* grid pos */
+    /* Start: row, col. End: row, col */
+    grid-area: 4 / 8 / 20 / 40;
+    display: flex;
+
+    display: grid;
+    grid-template-rows: 1fr repeat(14,2fr) 1fr;
+    grid-template-columns: 1fr repeat(30,2fr) 1fr;
+}
+
+
+.content-user{
+    border: 1px dashed black;
+    margin: 0px;
+    background-color: rgb(226, 226, 226);
+
+    /* grid pos */
+    /* Start: row, col. End: row, col */
+    grid-area: 2 / 2 / 16 / 32;
+    display: flex;
+
+    display: grid;
+    grid-template-columns: repeat(29,1fr);
+    grid-template-rows: repeat(13,1fr);
+}
+
+.content-event{
+    border: 1px dashed black;
+    margin: 0px;
+    background-color: rgb(226, 226, 226);
+    /* grid pos */
+    /* Start: row, col. End: row, col */
+    grid-area: 2 / 2 / 16 / 32;
+    display: flex;
+
+    display: grid;
+    grid-template-columns: repeat(29,1fr);
+    grid-template-rows: repeat(13,1fr);
+}
+
+.content-suspension{
+    border: 1px dashed black;
+    margin: 0px;
+    background-color: rgb(226, 226, 226);
+    /* grid pos */
+    /* Start: row, col. End: row, col */
+    grid-area: 2 / 2 / 16 / 32;
+    display: flex;
+
+    display: grid;
+    grid-template-columns: repeat(29,1fr);
+    grid-template-rows: repeat(13,1fr);
+}
+
+.content-upload{
+    border: 1px dashed black;
+    margin: 0px;
+    background-color: rgb(226, 226, 226);
+    /* grid pos */
+    /* Start: row, col. End: row, col */
+    grid-area: 2 / 2 / 16 / 32;
+    display: flex;
+
+    display: grid;
+    grid-template-columns: repeat(29,1fr);
+    grid-template-rows: repeat(13,1fr);
+}
+
+.content-header{
+    border: 1px dashed black;
+    margin: 0px;
+    background-color: rgb(141, 140, 140);
+
+    /* grid pos */
+    /* Start: row, col. End: row, col */
+    grid-area: 1 / 1 / 3 / 32;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.header-left{
+    /* grid pos */
+    /* Start: row, col. End: row, col */
+    grid-column-start: 1;
+    font-size: 3vh;
+    margin: 0;
+    margin-left: 5%;
+
+    align-self: center;
+    
+    
+}
+
+.header-middle{
+    /* grid pos */
+    /* Start: row, col. End: row, col */
+    grid-column-start: 2;
+    justify-self: center;
+}
+
+.header-right{
+    /* grid pos */
+    /* Start: row, col. End: row, col */
+    grid-column-start: 3;
+    justify-self: end;
+    align-self: center;
+    margin-right: 3%;
+}
+
+.filter-icon{
+    border: 1px dashed black;
+    margin: 0px;
+    background-color: rgb(141, 140, 140);
+}
+
+.filter-icon img{
+
+    justify-self: center;
+    align-self: center;
+
+    height: 50px;
+    width: 50px;
+}
+
+/*  */
+/*  */
+/*  */
+.hidden{
+    display: none;
+}
+
+/*  */
+
+
+
+

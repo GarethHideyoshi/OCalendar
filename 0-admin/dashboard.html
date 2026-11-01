@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/D-base.css">
+    <link rel="stylesheet" href="css/D-upload-form.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <section class="D-dashboard">
+        <div class="D-Header">
+            <div class="D-logo header-left"><p>DASHBOARD</p></div>
+            <div class="D-title"></div>
+        </div>
+
+        <div class="D-sidebar">
+            <div class="D-user"><p>User</p></div>
+            <div class="D-event"><p>Event</p></div>
+            <div class="D-suspension"><p>Suspension</p></div>
+
+            <div class="D-upload"><p>Upload</p></div>
+        </div>
+
+        <div class="D-content-area">
+            <!-- A LOT OF DIV e.g class="content-user" -->
+            <div class="content-user hidden">
+                <div class="content-header">
+                    <div class="header-left"><p>USER</p></div>
+                    <div class="header-middle"></div>
+                    <div class="header-right"></div>
+                </div>
+            </div>
+
+            <div class="content-event hidden">
+                <div class="content-header">
+                    <div class="header-left"><p>EVENTS</p></div>
+                    <div class="header-middle"></div>
+                    <div class="header-right"><div class="filter-icon filter-event"><img src="../asset/filter.svg" alt=""></div></div>
+                </div>
+
+            </div>
+
+            <div class="content-suspension hidden">
+                <div class="content-header">
+                    <div class="header-left"><p>SUSPENSION</p></div>
+                    <div class="header-middle"></div>
+                    <div class="header-right"><div class="filter-icon filter-suspension "><img src="../asset/filter.svg" alt=""></div>
+                    
+                </div>
+
+                </div>
+
+            </div>
+
+            <div class="content-upload">
+                <div class="content-header">
+                    <div class="header-left"><p>UPLOAD</p></div>
+                    <div class="header-middle"></div>
+                    <div class="header-right"></div>
+                </div>
+
+                    <form id="announcementForm" class="edit-panel">
+                        <!-- TITLE -->
+                        <label for="title" class="pos-title">Title</label>
+                        <input type="text" id="title" placeholder="Enter announcement title" required class="pos-title-input">
+
+                        <!-- Description -->
+                        <label for="description" class="pos-description">Description</label>
+                        <textarea id="description" placeholder="Enter announcement details..." required class="pos-description-input"></textarea>
+
+                        <!-- IMAGE PREV -->
+                        <label class="pos-image-label">Announcement Image</label>
+
+                        <div class="image-preview">
+                            <img id="imagePreview" src="assets/default-event.jpg" alt="Image preview">
+                        </div>
+
+                        <input type="file" id="image" accept="image/*" class="pos-image-input">
+
+                        <!-- Content Type -->
+                            <label for="contentType" class="pos-content-type-label">Content</label>
+                                <select id="contentType" required class="pos-content-type">
+                            <option value="" disabled selected>Select content type</option>
+                            <option value="Events">Events</option>
+                            <option value="Suspension">Suspension</option>
+                                </select>
+
+                                <!-- Department -->
+                            <label for="department" class="pos-dept-label">Department</label>
+                                <select id="department" required class="pos-dept">
+                            <option value="" disabled selected>Select department</option>
+                            <option value="DPRO">DPRO</option>
+                            <option value="IBED">IBED</option>
+                            <option value="COLLEGE">COLLEGE</option>
+                            <option value="MANAGEMENT">MANAGEMENT</option>
+                                </select>
+
+                                <!-- College Program -->
+                                 <!-- add hidden soon -->
+                            <div id="programContainer" class="pos-program-cont">
+
+                                <label for="program" class="pos-program-label">College Program</label>
+
+                                <select id="program" class="pos-program">
+                                    <option value="" disabled selected>Select college program</option>
+                                    <option value="Criminology, Arts and Sciences">
+                                        Criminology, Arts and Sciences
+                                    </option>
+                                    <option value="Computer Studies">
+                                        College of Computer Studies
+                                    </option>
+                                    <option value="Health Related Sciences">
+                                        College of Health Related Sciences
+                                    </option>
+                                    <option value="Teacher Education">
+                                        College of Teacher Education
+                                    </option>
+                                    <option value="Corporate and Management Education">
+                                        College of Corporate and Management Education
+                                    </option>
+                                </select>
+
+                            </div>
+
+                            <!-- Date -->
+                            <label for="eventDate" class="pos-date-label">Date</label>
+                            <input type="date" id="eventDate" required class="pos-date">
+
+                            <!-- Time -->
+                            <label for="eventTime" class="pos-time-label">Time</label>
+                            <input type="time" id="eventTime" required class="pos-time">
+
+                            <!-- Buttons -->
+                            <div class="form-buttons pos-form-buttons">
+                                <button type="button" id="cancelEdit">Cancel</button>
+                                <button type="submit" id="saveButton">Publish Announcement</button>
+                            </div>
+
+                    </form>
+
+            </div>
+
+
+        </div>
+
+
+
+    </section>
+    <script src="js/nav.js"></script>
+</body>
+</html>
