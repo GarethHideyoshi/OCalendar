@@ -225,6 +225,8 @@
     cursor: pointer;
 }
 
+.pos-program-cont.is-disabled label { opacity: 0.5; }
+.pos-program:disabled { cursor: not-allowed; background: #f0f0f0; }
 
 
 
