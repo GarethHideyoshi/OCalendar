@@ -3,6 +3,7 @@
 <head>
     <link rel="stylesheet" href="css/D-base.css">
     <link rel="stylesheet" href="css/D-upload-form.css">
+    <link rel="stylesheet" href="css/D-announcements.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -28,8 +29,12 @@
             <div class="content-user hidden">
                 <div class="content-header">
                     <div class="header-left"><p>USER</p></div>
-                    <div class="header-middle"></div>
+                    <div class="header-middle user-count"></div>
                     <div class="header-right"></div>
+                </div>
+
+                <div class="user-list" id="userList">
+
                 </div>
             </div>
 
@@ -37,8 +42,10 @@
                 <div class="content-header">
                     <div class="header-left"><p>EVENTS</p></div>
                     <div class="header-middle"></div>
-                    <div class="header-right"><div class="filter-icon filter-event"><img src="../asset/filter.svg" alt=""></div></div>
+                    <div class="header-right"><div class="filter-icon filter-event"><img src="asset/filter.svg" alt=""></div></div>
+                
                 </div>
+                <div class="announcement-list" id="eventList"></div>
 
             </div>
 
@@ -46,11 +53,11 @@
                 <div class="content-header">
                     <div class="header-left"><p>SUSPENSION</p></div>
                     <div class="header-middle"></div>
-                    <div class="header-right"><div class="filter-icon filter-suspension "><img src="../asset/filter.svg" alt=""></div>
+                    <div class="header-right"><div class="filter-icon filter-suspension "><img src="asset/filter.svg" alt=""></div>
                     
                 </div>
-
                 </div>
+                <div class="announcement-list" id="suspensionList"></div>
 
             </div>
 
@@ -98,26 +105,26 @@
                                 </select>
 
                                 <!-- College Program -->
-                                 <!-- add hidden soon -->
+                                <!-- add hidden soon -->
                             <div id="programContainer" class="pos-program-cont">
 
                                 <label for="program" class="pos-program-label">College Program</label>
 
                                 <select id="program" class="pos-program">
                                     <option value="" disabled selected>Select college program</option>
-                                    <option value="Criminology, Arts and Sciences">
+                                    <option value="CAD">
                                         Criminology, Arts and Sciences
                                     </option>
-                                    <option value="Computer Studies">
+                                    <option value="CS">
                                         College of Computer Studies
                                     </option>
-                                    <option value="Health Related Sciences">
+                                    <option value="HRS">
                                         College of Health Related Sciences
                                     </option>
-                                    <option value="Teacher Education">
+                                    <option value="TE">
                                         College of Teacher Education
                                     </option>
-                                    <option value="Corporate and Management Education">
+                                    <option value="CME">
                                         College of Corporate and Management Education
                                     </option>
                                 </select>
@@ -148,6 +155,10 @@
 
 
     </section>
+    <script src="js/announcement-store.js"></script>
     <script src="js/nav.js"></script>
+    <script src="js/upload.js"></script>
+    <script src="js/announcements-view.js"></script>
+    <script src="js/users-view.js"></script>
 </body>
 </html>

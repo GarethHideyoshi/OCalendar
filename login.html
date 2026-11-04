@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In / Sign Up - OC Announcement Page</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+
+    <div class="Boody">
+
+        <div class="portal-logo"><a href="login.html">Logo</a></div>
+
+        <div class="portal-tabs" role="tablist" aria-label="Account">
+            <button type="button" class="portal-tab active" id="tabLogin" role="tab"
+                    aria-selected="true" aria-controls="loginForm" data-tab="login">Log In</button>
+            <button type="button" class="portal-tab" id="tabSignup" role="tab"
+                    aria-selected="false" aria-controls="signupForm" data-tab="signup">Sign Up</button>
+        </div>
+
+        <!-- LOG IN -->
+        <form class="portal-form" id="loginForm" role="tabpanel" aria-labelledby="tabLogin" novalidate>
+            <div class="portal-field">
+                <label for="loginEmail" class="portal-label">Email Address:</label>
+                <input id="loginEmail" class="field-input" type="email"
+                       placeholder="Enter your email" autocomplete="email" required>
+            </div>
+
+            <p class="form-msg" id="loginMsg" role="alert"></p>
+            <button type="submit" class="btn portal-submit">Log In to Portal</button>
+        </form>
+
+        <!-- SIGN UP -->
+        <form class="portal-form" id="signupForm" role="tabpanel" aria-labelledby="tabSignup" novalidate hidden>
+            <div class="portal-row">
+                <div class="portal-field">
+                    <label for="suDepartment" class="portal-label caps">Department</label>
+                    <select id="suDepartment" class="field-select" required></select>
+                </div>
+                <div class="portal-field">
+                    <label for="suProgram" class="portal-label caps">Program</label>
+                    <select id="suProgram" class="field-select"></select>
+                </div>
+            </div>
+
+            <div class="portal-field">
+                <label for="suName" class="portal-label">Full Name:</label>
+                <input id="suName" class="field-input" type="text"
+                       placeholder="Enter your full name" autocomplete="name" required>
+            </div>
+
+            <div class="portal-field">
+                <label for="suEmail" class="portal-label">Email Address:</label>
+                <input id="suEmail" class="field-input" type="email"
+                       placeholder="Enter your email" autocomplete="email" required>
+            </div>
+
+            <p class="form-msg" id="signupMsg" role="alert"></p>
+            <button type="submit" class="btn portal-submit">Create Account</button>
+        </form>
+
+    </div>
+
+    <script src="js/announcement-store.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>
