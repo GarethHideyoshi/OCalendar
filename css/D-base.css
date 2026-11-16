@@ -197,6 +197,7 @@ body{
 
 .content-header{
     border: 1px dashed black;
+
     margin: 0px;
     background-color: rgb(141, 140, 140);
 
@@ -236,6 +237,17 @@ body{
     margin-right: 3%;
 }
 
+.user-list{
+    grid-area: 3 / 1 / 16 / 30;
+
+}
+
+.user-count{
+    font-size: 3vh;
+    align-self: center;
+
+}
+
 .filter-icon{
     border: 1px dashed black;
     margin: 0px;
@@ -260,6 +272,15 @@ body{
 
 /*  */
 
+.announcement-list{
+    grid-area: 3 / 1 / 16 / 30;
+    overflow-y: scroll;
+    
+}
 
-
+.announcement-list { display: grid; gap: 12px; padding: 12px; }
+.announcement-card { display: flex; gap: 12px; border: 1px solid #ccc; border-radius: 8px; padding: 12px; background: #fff; }
+.announcement-img { width: 120px; height: 120px; object-fit: cover; border-radius: 8px; }
+.announcement-meta { margin: 2px 0; font-size: 0.85rem; color: #666; }
+.announcement-empty { padding: 12px; color: #888; }
 

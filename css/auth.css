@@ -1,0 +1,239 @@
+/* ===========================================================
+   auth.css  -  login.html + profile.html
+   Load AFTER base.css (reuses the 402x874 frame + header).
+   =========================================================== */
+
+/* ---------- Sign out (header) ---------- */
+.signout-btn{
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    background-color: var(--c-control);
+    color: #fff;
+    border: 1px solid #8a8a8a;
+    border-radius: var(--radius);
+    font: inherit;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+.signout-btn:hover{ background-color: var(--c-control-active); }
+
+/* ---------- Form panel ---------- */
+.form-panel{
+    grid-area: 6 / 2 / 24 / 21;
+    background-color: var(--c-panel);
+    border-radius: var(--radius) var(--radius) 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 14px 16px;
+    min-height: 0;
+}
+
+.panel-title{
+    margin: 0 0 4px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+.field-label{
+    margin-top: 8px;
+    font-size: 0.85rem;
+    color: var(--c-text);
+}
+
+.field-input,
+.field-select{
+    width: 100%;
+    height: 36px;
+    font: inherit;
+    font-size: 0.9rem;
+}
+
+.field-input{
+    padding: 0 10px;
+    background-color: #fff;
+    color: var(--c-text);
+    border: 1px solid #bdbdbd;
+    border-radius: var(--radius);
+}
+.field-input[readonly]{
+    background-color: #e6e4e3;
+    color: #555;
+}
+.field-input:focus-visible,
+.field-select:focus-visible{
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
+.field-select{
+    appearance: none;
+    -webkit-appearance: none;
+    padding: 0 34px 0 12px;
+    background-color: var(--c-control);
+    color: #fff;
+    border: 0;
+    border-radius: var(--radius);
+    cursor: pointer;
+    background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 18px;
+}
+.field-select:disabled{ opacity: 0.5; cursor: not-allowed; }
+.field-select option{ color: #000; background-color: #fff; }
+
+/* ---------- Buttons ---------- */
+.form-actions{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 14px;
+}
+
+.btn{
+    flex: 1;
+    height: 40px;
+    padding: 0 16px;
+    background-color: var(--c-control);
+    color: #fff;
+    border: 0;
+    border-radius: var(--radius);
+    font: inherit;
+    cursor: pointer;
+}
+.btn:hover{ background-color: var(--c-control-active); }
+.btn-full{ margin-top: 14px; flex: none; width: 100%; }
+
+.btn-text{
+    padding: 0;
+    background: none;
+    border: 0;
+    color: #fff;
+    font: inherit;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+.btn-text:hover{ text-decoration: underline; }
+
+/* ---------- Messages ---------- */
+.form-msg{
+    margin: 8px 0 0;
+    padding: 5px 8px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    color: #fff;
+}
+.form-msg:empty{ display: none; }
+.form-msg.error{ background-color: #c62828; }
+.form-msg.success{ background-color: #008f1f; }
+.form-msg.info{ background-color: var(--c-control); }
+
+/* ---------- Description block ---------- */
+.desc-block{
+    grid-area: 24 / 2 / 39 / 21;
+    background-color: var(--c-panel-dark);
+    color: #fff;
+    border-radius: 0 0 var(--radius) var(--radius);
+    padding: 20px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+    overflow-y: auto;
+    min-height: 0;
+}
+
+.desc-block h2{
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+.desc-block p{
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+
+/* ===========================================================
+   Portal: Log In / Sign Up tabs (login.html)
+   =========================================================== */
+
+.portal-logo{
+    grid-area: 1 / 1 / 15 / 22;
+    background-color: var(--c-header);
+    display: grid;
+    place-items: center;
+}
+.portal-logo a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.8rem;
+}
+
+.portal-tabs{
+    grid-area: 15 / 1 / 18 / 22;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.portal-tab{
+    border: 0;
+    background-color: var(--c-control);
+    color: #fff;
+    font: inherit;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.portal-tab.active{ background-color: var(--c-control-active); }
+.portal-tab:not(.active):hover{ background-color: #7a7a7a; }
+.portal-tab:focus-visible{ outline: 2px solid #fff; outline-offset: -4px; }
+
+.portal-form{
+    grid-area: 18 / 1 / 41 / 22;
+    display: flex;
+    flex-direction: column;
+    padding: 24px 8% 36px;
+    min-height: 0;
+}
+.portal-form[hidden]{ display: none; }
+
+.portal-row{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.portal-field{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+    min-width: 0;
+}
+
+.portal-label{
+    margin-bottom: 6px;
+    font-size: 0.85rem;
+    color: #000;
+}
+.portal-label.caps{ text-transform: uppercase; }
+
+.portal-form .field-input{ border-color: #333; }
+.portal-form .field-select{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.portal-form .form-msg{ margin: 0 0 12px; }
+
+.portal-submit{
+    flex: none;
+    align-self: center;
+    width: 70%;
+    margin-top: auto;      /* pushes the button to the bottom, like the Figma */
+}

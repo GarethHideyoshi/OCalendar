@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OC Announcement Page</title>
+    <link rel="stylesheet" href="css/base.css">
+</head>
+<body>
+
+    <div class="Boody">
+
+        <!-- HEADER -->
+        <div class="headhead">
+            <a class="Logo" href="homepage.html">Logo</a>
+            <div class="header-title">OC ANNOUNCEMENT PAGE</div>
+            <a class="profile" href="profile.html" aria-label="Profile"><span id="profileInitial">?</span></a>
+        </div>
+
+        <!-- FILTERS -->
+        <section class="choice-container">
+            <button type="button" class="button-event active" data-type="Events">Events</button>
+            <button type="button" class="button-suspension" data-type="Suspension">Suspension</button>
+
+            <select id="deptSelect" class="dropdown-dept" aria-label="Department"></select>
+            <select id="courseSelect" class="dropdown-program" aria-label="Course"></select>
+
+            <button type="button" class="button-previous" data-period="previous">Previous</button>
+            <button type="button" class="button-today" data-period="today">Today</button>
+            <button type="button" class="button-upcoming active" data-period="upcoming">Upcoming</button>
+
+            <button type="button" class="button-time" id="timeFilterBtn">Time filter</button>
+        </section>
+
+        <!-- CURRENT CONTENT -->
+        <div class="content-text-container"><p id="listHeading">Upcoming Event</p></div>
+        <button type="button" class="button-left" id="prevBtn" aria-label="Previous announcement">&lt;</button>
+        <button type="button" class="button-right" id="nextBtn" aria-label="Next announcement">&gt;</button>
+
+        <!-- DISPLAY -->
+        <section class="display-data-container">
+
+            <div class="display-number" id="counter">0/0</div>
+
+            <div class="display-image-container">
+                <div class="display-image imgleft is-empty" id="imgLeft"></div>
+                <div class="display-image imgcenter is-empty" id="imgCenter"></div>
+                <div class="display-image imgright is-empty" id="imgRight"></div>
+            </div>
+
+            <section class="description-container">
+                <div class="department"><p id="dispDept">-</p></div>
+                <div class="display-title"><p id="dispTitle">Nothing to show</p></div>
+                <div class="display-description">
+                    <div class="text-box">
+                        <p id="dispDesc"></p>
+                    </div>
+                </div>
+                <div class="display-date" id="dispDate"></div>
+                <div class="button-detail disabled" id="ID-btn-detail">Details</div>
+            </section>
+        </section>
+
+    </div>
+
+    <script src="js/announcement-store.js"></script>
+    <script src="js/base.js"></script>
+    <script src="js/home.js"></script>
+</body>
+</html>
