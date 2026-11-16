@@ -112,7 +112,7 @@
     padding: 0;
     background: none;
     border: 0;
-    color: #fff;
+    color: #000000;
     font: inherit;
     font-size: 0.85rem;
     cursor: pointer;
@@ -170,7 +170,41 @@
     background-color: var(--c-header);
     display: grid;
     place-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    overflow: hidden;
 }
+
+.aura{
+    position: relative;
+    z-index: 2;
+    grid-area: 1 / 1 / 1 / 1;
+    height: 120%;
+    
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+    background-image: radial-gradient(#66BB6A,#1B5E20 80%);
+}
+
+.image-logo{
+    position: relative;
+    z-index: 3;
+    grid-area: 1 / 1 / 1 / 1;
+    background-image: url(../asset/OC-LOGO.png);
+    height: 100%;
+    width: 100%;
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+
+
+.portal-logo > .image-logo{
+
+}
+
 .portal-logo a{
     color: #fff;
     text-decoration: none;
@@ -191,7 +225,7 @@
     cursor: pointer;
 }
 .portal-tab.active{ background-color: var(--c-control-active); }
-.portal-tab:not(.active):hover{ background-color: #7a7a7a; }
+.portal-tab:not(.active):hover{ background-color: var(--hover-color); }
 .portal-tab:focus-visible{ outline: 2px solid #fff; outline-offset: -4px; }
 
 .portal-form{

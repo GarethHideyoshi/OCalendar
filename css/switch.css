@@ -1,0 +1,27 @@
+:root{
+
+}
+
+.switcher{
+    position: fixed;
+    z-index: 5;
+    height: 50px;
+    width: 120px;
+
+    margin: 1px;
+    background-color: wheat;
+    top: 0;
+    justify-content: center;
+
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.switcher > p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5vh;
+    align-self: center;
+    justify-self: center;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}

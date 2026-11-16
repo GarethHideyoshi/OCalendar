@@ -14,14 +14,18 @@
     --lever: 1;
 
     /* palette */
-    --c-header: #434343;
-    --c-panel: #9d9998;
-    --c-panel-dark: #6f6f6f;
-    --c-control: #6b6b6b;
-    --c-control-active: #4f4f4f;
-    --c-surface: #f9f8f8;
+    --c-header: #1B5E20;
+    --c-panel: #cff2d2;
+    --c-panel-dark: #A5D6A7;
+    --c-control: #66BB6A;
+    --c-control-active: #ECB65F;
+    --c-surface: #66BB6A;
     --c-text: #1b1b1b;
     --radius: 7px;
+    --hover-color: #ba9c6c;
+
+    --rotate-logo: 0deg;
+    --duration: 1s;
 }
 
 *{
@@ -31,7 +35,7 @@
 
 body{
     margin: 0;
-    background-color: #e6e4e3;
+    background-color: #898989;
     color: var(--c-text);
     font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
@@ -41,7 +45,7 @@ body{
     height: 874px;
     width: 402px;
     margin: 0 auto;
-    background-color: #fff;
+    background-color: #ffffff;
     overflow: hidden;
 
     display: grid;
@@ -59,9 +63,93 @@ body{
     padding: 0 5%;
 }
 
+.headhead-profile{
+    grid-area: 1 / 1 / 5 / 22;
+    background-color: var(--c-header);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+    display: grid;
+    grid-template-columns: 20% 1fr 30%;
+}
+
+.adjust{
+    max-height: 72.35px;
+    /* max-width: 85.27px; */
+}
+
 .Logo{
     flex: 1;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template: 1fr 1fr;
+    overflow: hidden;
+
+}
+
+.aura-hover{
+    position: relative;
+    z-index: 2;
+    grid-area: 1 / 1 / 1 / 1;
+    height: 85%;
+    justify-self: center;
+    align-self: center;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+    background-image: radial-gradient(var(--c-control-active), var(--hover-color) 60%, var(--c-header) 90%);
+    background-position: center;
+}
+
+.aura{
     
+    position: relative;
+    z-index: 2;
+    grid-area: 1 / 1 / 1 / 1;
+    height: 85%;
+    justify-self: center;
+    align-self: center;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+    background-image: radial-gradient(#66BB6A,#1B5E20 80%);
+    background-position: center;
+}
+
+
+
+.Logo:hover > .aura{ opacity: 0;}
+.Logo:hover > .aura-hover{ opacity: 1;}
+
+.air{
+
+}
+
+.Logo-img{
+    transition-duration: var(--duration);
+    position: relative;
+    z-index: 3;
+    grid-area: 1 / 1 / 1 / 1;
+    background-image: url(../asset/OC-LOGO.png);
+    height: 70%;
+    aspect-ratio: 1/1;
+    background-size: 100%;
+    justify-self: center;
+    align-self: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: rotate(var(--rotate-logo));
+}
+
+.put-right{
+    
+}
+
+.Logo-cont{
+    flex: 1;
+    height: 100%;
+    aspect-ratio: 1 / 1 ;
+    justify-self: start;
     
 }
 
@@ -106,6 +194,8 @@ body{
     row-gap: 12px;
     padding: 0 14px;
     align-content: center;
+
+    border: 10px double white;
 }
 
 .choice-container button,
@@ -126,7 +216,7 @@ body{
 
 .choice-container button:hover:not(.active),
 .choice-container select:hover:not(:disabled){
-    background-color: #7a7a7a;
+    background-color: var(--hover-color);
 }
 
 .choice-container button.active{
@@ -218,15 +308,27 @@ body{
 .button-left,
 .button-right{
     align-self: center;
+    align-content: center;
     height: 30px;
     margin: 0 3px;
-    padding: 0;
-    border: 0;
+    padding: 0px;
+    border: 0px;
     background-color: var(--c-header);
     color: #fff;
     font: inherit;
     cursor: pointer;
+    border-radius: 10px;
+
 }
+
+.button-left p,
+.button-right p{
+    margin: 0;
+    padding: 0;
+    align-self: center;
+    transform: translateY(-10%);
+}
+
 .button-left{  grid-area: 19 / 17 / 20 / 19; }
 .button-right{ grid-area: 19 / 19 / 20 / 21; }
 .button-left:hover,
@@ -242,6 +344,8 @@ body{
 
     display: grid;
     grid-template-rows: 22px var(--image-height) auto;
+
+    border: 5px double white;
 }
 
 .display-number{
@@ -372,7 +476,7 @@ body{
     cursor: pointer;
     user-select: none;
 }
-.button-detail:hover:not(.disabled){ background-color: #7a7a7a; }
+.button-detail:hover:not(.disabled){ background-color: var(--hover-color); }
 .button-detail.disabled{ opacity: 0.4; cursor: not-allowed; }
 
 .department p,
