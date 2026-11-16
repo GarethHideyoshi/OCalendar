@@ -1,0 +1,230 @@
+/* ===========================================================
+   D-announcements.css
+   Cards (2 per row, fixed height), popups, filter icon
+   =========================================================== */
+
+/* ---------- List: two cards per row ---------- */
+.announcement-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    padding: 16px;
+    align-content: start;
+    overflow-y: auto;          /* needs a bounded height from its parent to scroll */
+}
+
+.announcement-empty {
+    grid-column: 1 / -1;
+    padding: 12px;
+    color: #888;
+}
+
+/* ---------- Card (fixed height, square image on the left) ---------- */
+.announcement-card {
+    display: flex;
+    gap: 16px;
+    height: 200px;
+    box-sizing: border-box;
+    padding: 12px;
+    background: #fff;
+}
+
+.announcement-img-box {
+    flex: 0 0 176px;
+    width: 176px;
+    height: 176px;
+    border: 1px solid #000;
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: #888;
+}
+
+.announcement-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.announcement-info {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.announcement-title {
+    margin: 0;
+    font-size: 1rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.announcement-meta {
+    margin: 0;
+    font-size: 0.9rem;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Delete + Edit sit bottom-right */
+.announcement-actions {
+    align-self: flex-end;
+    display: flex;
+    gap: 12px;
+}
+
+.icon-btn {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    padding: 0;
+    background: #fff;
+    color: #000;
+    border: 2px solid #000;
+    cursor: pointer;
+}
+.icon-btn:hover { background: #000; color: #fff; }
+.icon-btn.danger:hover { background: #c62828; border-color: #c62828; }
+
+/* ---------- Filter icon ---------- */
+.filter-icon { cursor: pointer; }
+.filter-icon.active { outline: 2px solid #008f1f; border-radius: 6px; }
+
+/* ---------- Popup ---------- */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-box {
+    width: min(560px, 92vw);
+    box-sizing: border-box;
+    padding: 16px;
+    background: #fff;
+}
+
+.modal-title { margin: 0 0 16px; font-weight: 400; font-size: 1.5rem; }
+.modal-text { margin: 0 0 24px; }
+.modal-body { min-height: 60px; }
+
+.modal-actions { display: flex; gap: 24px; margin-top: 24px; }
+
+.modal-btn {
+    flex: 1;
+    padding: 8px;
+    font: inherit;
+    font-size: 1.25rem;
+    border: 0;
+    cursor: pointer;
+}
+.modal-cancel  { background: #b9b9b9; color: #000; }
+.modal-confirm { background: #008f1f; color: #fff; }
+.modal-confirm.danger { background: #c62828; }
+
+/* ---------- Filter popup fields ---------- */
+.filter-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+.filter-field { display: flex; flex-direction: column; gap: 6px; }
+.filter-label { font-size: 0.85rem; color: #555; }
+
+.filter-grid select,
+.filter-grid input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px;
+    font: inherit;
+    font-size: 0.9rem;
+    color: #fff;
+    background: #6f6f6f;
+    border: 0;
+    color-scheme: dark;
+}
+.filter-grid select:disabled,
+.filter-grid input:disabled { opacity: 0.45; cursor: not-allowed; }
+
+.filter-clear {
+    margin-top: 12px;
+    padding: 0;
+    background: none;
+    border: 0;
+    color: #555;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+@media (max-width: 560px) {
+    .filter-grid { grid-template-columns: 1fr; }
+}
+
+/* ---------- Upload form: program disabled look ---------- */
+.pos-program-cont.is-disabled label { opacity: 0.5; }
+.pos-program:disabled { cursor: not-allowed; background: #f0f0f0; }
+
+/* ---------- Users tab (read-only list) ---------- */
+.user-list {
+    display: grid;
+    gap: 10px;
+    padding: 16px;
+    align-content: start;
+    overflow-y: auto;
+}
+
+.user-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+}
+
+.user-avatar {
+    flex: 0 0 44px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #6f6f6f;
+    color: #fff;
+    display: grid;
+    place-items: center;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+.user-main { flex: 1; min-width: 0; }
+.user-name { margin: 0; font-weight: 600; }
+.user-name.pending { font-weight: 400; font-style: italic; color: #888; }
+
+.user-email,
+.user-meta {
+    margin: 2px 0 0;
+    font-size: 0.85rem;
+    color: #555;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.user-joined { font-size: 0.8rem; color: #888; white-space: nowrap; }
