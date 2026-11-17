@@ -4,15 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OC Announcement Page</title>
+    <link rel="stylesheet" href="css/switch.css">
     <link rel="stylesheet" href="css/base.css">
 </head>
 <body>
+
+    <a class="switcher" href="dashboard.html">
+        <p>to dashboard</p>
+    </a>
 
     <div class="Boody">
 
         <!-- HEADER -->
         <div class="headhead">
-            <a class="Logo" href="homepage.html">Logo</a>
+           
+            <div class="Logo ">
+                <div class="Logo-img rota"></div>
+                <div class="aura-hover"></div>               
+                <div class="aura"></div>
+
+            </div>
             <div class="header-title">OC ANNOUNCEMENT PAGE</div>
             <a class="profile" href="profile.html" aria-label="Profile"><span id="profileInitial">?</span></a>
         </div>
@@ -34,8 +45,8 @@
 
         <!-- CURRENT CONTENT -->
         <div class="content-text-container"><p id="listHeading">Upcoming Event</p></div>
-        <button type="button" class="button-left" id="prevBtn" aria-label="Previous announcement">&lt;</button>
-        <button type="button" class="button-right" id="nextBtn" aria-label="Next announcement">&gt;</button>
+        <button type="button" class="button-left" id="prevBtn" aria-label="Previous announcement"><p>&lt;</p></button>
+        <button type="button" class="button-right" id="nextBtn" aria-label="Next announcement"><p>&gt;</p></button>
 
         <!-- DISPLAY -->
         <section class="display-data-container">
@@ -66,5 +77,6 @@
     <script src="js/announcement-store.js"></script>
     <script src="js/base.js"></script>
     <script src="js/home.js"></script>
+    <script src="js/rota.js"></script>
 </body>
 </html>
